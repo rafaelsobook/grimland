@@ -1,0 +1,418 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grim Land</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .intro-screen{
+            background: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99;
+            font-family: sans-serif;
+            letter-spacing: 5px;
+            color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+  <script type="module" crossorigin src="/assets/index-WHABGHFC.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BGKzcgyB.css">
+</head>
+<body>
+    <p class="intro-screen">Grim Wraith</p>
+
+    
+
+    <video class="video-background" muted loop autoPlay >
+        <!-- <source src="./images/vids/grimland.mp4" type="video/mp4"></source> -->
+        <source  src="./images/vids/grimlandw.webm" type="video/webm"></source> 
+    </video>
+
+    <div class="hit-screen"></div>
+    <section class="login-page">
+        <img src="./images/UI/logo.png" alt="" class="logo">
+        <!-- <img src="./images/UI/wallpaper2.jpeg" alt="" class="wallpaper"> -->
+        <div class="login-container">
+            <button class="btn" id="continueBtn"> continue </button>
+            <img src="./images/UI/loginForm2.png" class="login-background"/>
+            <input type="text" placeholder="Enter UserName"
+            id="usernameInp" class="inputs" />
+    
+            <input type="password" placeholder="Enter Password"
+            id="passwordInp" class="inputs" />
+    
+            <input type="password" placeholder="Confirm Password"
+            id="confirmpass" class="inputs toreg" />
+    
+            <div class="login-cont-btns">
+                <button class="toreg toggleBtns">
+                    <img src="./images/UI/cancelicon.png" class="button-img" />
+                </button>
+                <button class="tologin" id="loginBtn">
+                    <img src="./images/UI/loginicon.png" class="button-img" />
+                </button>            
+                <button class="toreg" id="registerBtn">
+                    <img src="./images/UI/createicon.png" class="button-img" />
+                </button>            
+            </div>
+    
+            <button class="tologin toreg-btn toggleBtns">
+                <img src="./images/UI/createicon.png" class="button-img" />
+            </button>
+        </div>
+
+        <!-- socials -->
+        <div class="socials-container">
+            <p class="social-label">Join Our Discord</p>
+            <a href="https://discord.gg/qZQY7QD6Un">
+                <img src="./images/UI/discordimg.png" alt="" class="social-img">
+            </a>
+        </div>
+    </section>
+    <!-- RESPAWN HTML -->
+    <div class="respawn-btn-cont">
+        <img src="./images/UI/blankicon.png" alt="" class="btn-back">
+        <p class="respawbtn-label">Respawn 10s</p>
+    </div>
+    <!-- CLAIM ITEM HTML -->
+    <div class="claim-container">
+
+    </div>
+    <!-- status effects pop ups -->
+    <ul class="status-effects-list">
+        <p class="status-label">SP Drained -200hp</p>
+    </ul>
+    <div class="popup-container popstyle1 popup-close"><p class="pop-up-label">Error Server</p></div>
+    <!-- loading screen -->
+    <p class="mini-loading screenFadeOff">Equiping ....</p>
+    <div class="loading-screen screenFadeOff">
+        <img src="./images/loadingscreens/ls1.png" alt="" class="wallpaper">
+        <div class="loading-bx">
+            <img src="./images/items/crafting/diamantinecore.png" alt="" class="lc-img">
+            <p class="lc-cap">Loading ... <span class="ls-percent">0%</span> </p>
+            <!-- <p class="ls-percent">0%</p> -->
+            <p class="ls-tips">Always bring pickaxe for dungeons</p>
+        </div>
+    </div>
+    <!-- THE LIFE AND MANA GUI -->
+    <div class="simple-details-gui">
+      <p class="lvl-name">lvl 2 orchid</p>
+      <div class="life-mana-bx">
+          <div class="bar-outline">
+              <div class="life-ui bar"></div>
+              <p class="lifeCap thecap"></p>
+          </div>
+          <div class="bar-outline">
+              <div class="mana-ui bar"></div>
+              <p class="manaCap thecap"></p>
+          </div>
+      </div>
+      <div class="stam-bx">
+          <div class="stamina-bar"></div>
+          <p class="stamCap"></p>
+      </div>
+      <div class="survival-stats">
+          <div class="surv-bx">
+              <img src="./images/UI/stomach.png" alt="" class="surv-img">
+              <p class="hungStat surv-lbl">100</p>
+          </div>
+          <div class="surv-bx">
+              <img src="./images/UI/pillow.png" alt="" class="surv-img">
+              <p class="restStat surv-lbl">100</p>
+          </div>
+      </div>
+      <div class="negative-stats">
+
+      </div>
+    </div>
+    <div class="stats-container cont">
+        <img src="./images/UI/border4.png" alt="" class="border-backg">
+        <img src="./images/UI/xshield.png" class="close-parent btn"/>
+        <div class="center-glow"></div>
+        <div class="stat-upper-detail">
+            <div class="level-and-name">
+                <div class="level-bx">
+                    <img src="./images/UI/levelContainer.png" alt="" class="levelimg">
+                    <p class="lvl-num">1</p>
+                </div>
+                <p class="stat-name">Daveon</p>
+            </div>
+            <img src="./images/titles/rookie.png" alt="" class="display-img">
+        </div>
+        <div class="stat-detail-cont">
+            <div class="uniques-cont">
+                <p class="uniques-cap">Unique Abilities</p>
+                <!-- when mouse is pointed at the ability will show the info -->
+                <div class="uniques-desc-bx">
+                    <div class="uniques-bx">
+                        <img src="" alt="" class="uniques-img ability-img">
+                        <p class="uniques-name ability-name">Life</p>
+                    </div>
+                    <p class="ability-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, magnam dolores sapiente fuga non facere similique voluptate deserunt enim. Culpa reprehenderit incidunt ea deleniti quis dolores autem id in error.</p>
+                    <ul class="description-list">
+                        
+                    </ul>
+                </div>
+                
+                <div class="uniques-list">
+          
+                </div>
+            </div>
+            <div class="left statbx">
+                <div class="upgrade-bx strength">
+                    <img src="./images/UI/stricon.png" alt="" class="upgradeimg">
+                    <p class="stat-upgrade-name">1 strength</p>
+                    <button class="upgrade-btn strength btn">+</button>
+                </div>
+                <div class="upgrade-bx dex">
+                    <img src="./images/UI/dexicon.png" alt="" class="upgradeimg">
+                    <p class="stat-upgrade-name">1 dexterity</p>
+                    <button class="upgrade-btn dex btn">+</button>
+                </div>
+                <div class="upgrade-bx magic">
+                    <img src="./images/UI/manaicon.png" alt="" class="upgradeimg">
+                    <p class="stat-upgrade-name">1 mana source</p>
+                    <button class="upgrade-btn magic btn">+</button>
+                </div>
+            </div>
+            <div class="right statbx">
+                <div class="heart-bx">
+                    <img src="./images/UI/body1.png" alt="" class="heart-body-backg">
+                    <img src="./images/heartcores/core1.png" alt="" class="heart-img">
+                    <img src="./images/heartcores/core1.png" alt="" class="heart-img heart-beat-img">
+                </div>                
+                <div class="line"></div>
+                <p class="heart-status">STABLE</p>
+                <p class="heart-status-def">heart is stable and no complications</p>
+            </div>
+        </div>
+    </div>
+    <div class="abilities-notif-container screenFadeOff cont">
+        <p class="ablty-cap">Abilities Earned</p>
+        <ul class="abilities-notif-list">
+      
+        </ul>
+        <div class="btn-bx">
+            <button class="ablty-notif-btn">accept</button>
+        </div>
+        
+    </div>
+    <div class="emoji-container cont">
+        <img src="./images/UI/xshield.png" class="close-parent btn"/>
+        <ul class="emoji-lists">
+            <button class="emoji-btn triumph">Triumph</button>
+            <button class="emoji-btn thankful">Thankful</button>
+            <button class="emoji-btn laugh">Laugh</button>            
+        </ul>
+    </div>
+    <div class="nft-lists-container cont">
+        <img src="./images/UI/xshield.png" class="close-parent btn"/>
+        <div class="nft-header">
+            <img src="./images/UI/nftshop.png" alt="" class="nft-icon">
+            <p class="nft-network">Sepolia TestNet.</p>            
+            <p class="nft-token-name">Grimm Items</p>
+        </div>
+        <div class="nft-lists">
+            
+        </div>
+    </div>
+    <!-- ICONS ON RIGHT -->
+    <div class="upper-icons-container">
+        <button id="actionsBtn" class="uppericon-btn">
+            <img src="./images/UI/actions.png" alt="" class="upper-icon-img">
+        </button>
+        <button id="nftShopBtn" class="uppericon-btn">
+            <img src="./images/UI/nftshop.png" alt="" class="upper-icon-img">
+        </button>
+        <button id="connectBtn" class="uppericon-btn">
+            <img src="./images/UI/metamask.png" alt="" class="upper-icon-img">
+        </button>
+    </div>
+
+    <div class="icons-container">        
+        <button class="icon-btn btn menu-btns enhance">
+            <img src="./images/UI/enhance.png" alt="" class="icon-img">
+        </button>
+        <button class="icon-btn btn menu-btns stats">
+            <img src="./images/UI/stats.png" alt="" class="icon-img">
+        </button>
+        <button class="icon-btn btn menu-btns inventory">
+            <img src="./images/UI/inventory.png" alt="" class="icon-img">
+        </button>
+    </div>
+    <!-- enhancing equipable Items UI -->
+    <div class="enhancing-container">
+        <img src="./images/UI/xshield.png" class="close-parent btn"/>
+        <div class="center-glow">
+            <img src="./images/UI/enhance.png" class="center-glow-img"/>
+        </div>
+        <img src="./images/UI/design1.png" alt="" class="container-design">
+        <div class="core-used-bx">
+            <img src="./images/UI/backgroundCore.png" alt="" class="design-img">
+            <img src="./images/items/crafting/diaboliccore.png" alt="" class="core-used-img">
+        </div>        
+        <div class="percent-bx">
+            <div class="design-bx"></div>
+            <p class="enhance-rate">0%</p>
+            <p class="normal-label">possibility rate</p>
+        </div>
+        <div class="enhanceable-itembx">
+            <img src="./images/UI/border.png" alt="" class="design-border">
+            <img src="./images/items/equipable/frostbite.png" alt="" class="enhance-item">
+        </div>
+        <button class="enhancing-button">
+            <img src="./images/UI/blankicon.png" alt="" class="btn-background">
+            <p class="button-label">Enhance</p>
+        </button>  
+    </div>
+    <div class="enhancer-itemlist-cont">
+        <img src="./images/UI/xshield.png" class="close-parent btn"/>
+        <div class="enhancer-itemslist">
+
+        </div>
+    </div>
+
+    <!-- inventory -->
+    <div class="inventory-container cont">
+        <img src="./images/UI/xshield.png" class="close-parent btn"/>
+        <div class="cont-bx armorycont">
+            <p class="bx-title">Armory</p>
+            <div class="armory-bx">
+                <div class="armory-list gears">
+                    <button class="eqpd-slot helmet"></button>
+                    <button class="eqpd-slot armor"></button>
+                    <button class="eqpd-slot belt"></button>
+                    <button class="eqpd-slot"></button>
+                </div>
+                <div class="bx-img-display">
+                    <img src="./images//UI/magCircle.png" alt="" class="img-display">
+                    <img src="./images//UI/humanBody.png" alt="" class="img-display body-img">
+                </div>
+                <div class="armory-list weapon-accessory">
+                    <button class="eqpd-slot weapon">
+                        <!-- <img src="./images/items/equipable/frostbite.png" alt="" class="slot-img slot-rare"> -->
+                    </button>
+                    <button class="eqpd-slot cloak"></button>
+                    <button class="eqpd-slot"></button>
+                    <button class="eqpd-slot"></button>
+                </div>
+            </div>
+        </div>
+        <div class="cont-bx">
+            <p class="bx-title">Inventory</p>
+            <div class="assets-bx">
+                <div class="bx">
+                    <img src="./images/UI/coins.png" alt="" class="asset-img">
+                    <p class="gold-coin">x100</p>
+                </div>
+            </div>
+            <div class="slots-list">
+                <button class="slot-btn">
+                    <!-- <img src="./images/items/swords/frostbite.png" alt="" class="slot-img"> -->
+                </button>
+                <button class="slot-btn"></button>
+                <button class="slot-btn"></button>
+                <button class="slot-btn"></button>
+                <button class="slot-btn"></button>
+                <button class="slot-btn"></button>
+            </div>
+        </div>
+    </div>
+    <div class="item-info-cont cont">
+        <img src="./images/UI/xshield.png" class="close-parent btn"/>
+        <div class="img-ttle">
+            <div class="img-bx">
+                <img src="./images/UI/border.png" alt="" class="img-border">
+                <img src="./images/items/equipable/frostbite.png" alt="" class="item-img itemInfoImg">
+            </div>
+            <div class="item-name-and-slot-bx">
+                <p class="item-ttle iteminfoTtle">Frost Bite</p>
+                <div class="slots-bx">
+                    <!-- <img src="./images/items/crafting/diaboliccore.png" alt="" class="slot-img"> -->
+                </div>
+            </div>            
+            <p class="item-qnty">x1</p>
+        </div>
+        <p class="item-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, doloremque! Aspernatur aliquam modi reprehenderit nobis impedit .</p>
+        <div class="item-btns">
+            <button id="sellItemBtn" class="item-btn btn">
+                <p class="item-lbl">sell</p>
+                <span class="item-selling-price">x 100</span>
+            </button>
+            <div class="btn-cont">
+                <div class="sellnft-form">
+                    <input type="number" placeholder="value: 0.001" id="inpNft">
+                    <button id="listNftBtn" class="item-btn btn">sell nft</button>
+                </div>                
+                <button id="equipItemBtn" class="item-btn btn">equip</button>  
+            </div>                      
+        </div>
+
+    </div>
+    <div class="item-listing-form">
+
+    </div>
+    <!-- When Obtain an Item will popup on top screen -->
+    <div class="acquired-lists">
+       
+    </div>
+    <!-- Interact Button -->
+    <button id="interactBtn">
+        <img src="./images/UI/interact.png" alt="" class="iteract-img">
+    </button>
+    <!-- STORY Container Notifs -->
+    <div class="story-notif-container cont">
+        <div class="story-bx">
+            <h4 class="story-title">Destroy Golems</h3>
+            <p class="story-required">6/10</p>
+        </div>
+        <p class="story-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat deleniti veniam temporibus</p>
+    </div>
+    <!-- chat box -->
+    <div class="chat-container">
+        <ul class="chats-list">
+        </ul>
+        <div class="chat-form">
+            <input type="text" name="" id="" class="chat-inp">
+            <button class="chat-sendbtn">send</button>
+        </div>
+    </div>
+    <!-- SHOP BUY ITEM -->
+    <div class="shop-container cont">
+        <img src="./images/UI/xshield.png" class="close-parent btn"/>
+        <p class="label">Buy Items</p>
+        <div class="shop-list">
+           
+        </div>
+    </div>
+    <div class="trade-desc-bx">
+        <div class="top">
+            <img src="./images/UI/border3.png" alt="" class="trade-border">
+            <img src="./images/items/keys/key_a0.png" alt="" class="trade-item-img">
+            <p class="trade-item-name">asd</p>
+        </div>
+        <p class="trade-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id architecto ut asperiores nemo, iure dignissimos alias voluptatum numquam quod vel quidem delectus harum ipsum! Magnam ea exercitationem neque architecto dolorum?</p>
+    </div>
+    <div class="buy-confirm-cont">
+        <p class="buy-label">Buy sword ?</p>
+        <div class="buy-btns">
+            <button id="confirmBuy" class="buy-btn">Yes</button>
+            <button id="cancelBuy" class="buy-btn">No</button>
+        </div>
+    </div>
+    <canvas></canvas>
+</body>
+</html>
